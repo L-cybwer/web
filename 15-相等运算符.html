@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>相等运算符</title>
+</head>
+
+<body>
+    <script>
+        //数值相等==
+        //类型可以不同，值相等就可以
+        var a = 3,
+            b = '3';
+        console.log(a == b); //true
+
+
+
+
+        //不等于！=
+        //值不等就返回true 值相等就直接返回false
+        var b = 3 != 4;
+        console.log(b); //true
+
+        //特殊情况 
+        //NaN跟任何其他变量都不等，甚至不等于自己
+        var a = NaN != NaN;
+        console.log(a); //true
+
+
+
+        console.log(null == undefined); //都是空的意思
+
+       //
+        //========================================
+        //全等和全不等，
+        //全等表示数值相等类型相同 ===表示
+        //不全等 !==
+        //只要类型不同或者值不等于那么就返回true
+
+        var b = 55 == "55";
+        console.log(b); //true
+
+        var b = 55 === "55";
+        console.log(b); //false
+
+        var b = 55 !== "55";
+        console.log(b);//true
+
+        var a = 5 !== 5;
+        console.log(a);//false
+
+        var a = 5 !== '5';
+        console.log(a);//true
+
+        var a=5===5;
+        console.log(a);
+    </script>
+    //=====
+</body>
+
+</html>

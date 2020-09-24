@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test脚本</title>
+</head>
+
+<body>
+    <script>
+        //定义一个构造函数以初始化一个新的 point对象
+        function point(x, y) { //按照惯例，构造函数均以大写字母开始
+            this.x = x; //关键字this指代初始化的实例
+            this.y = y; //将函数存储为对象的属性
+        } //不需要return 
+        //使用new关键字和构造函数来创建一个实例
+        var p = new point(1, 1); //平面几何中的点（1，1）
+        //通过给构造函数的prototype对象赋值，来给point对象定义方法
+        point.prototype.r = function () {
+            return Math.sqrt(        //返回x与y的平方根的和
+                this.x * this.x +   //this指代调用这个方法的对象
+                this.y * this.y
+            );
+        }
+
+        //point的实例对象p（以及所有的point实例对象）继承了方法r()
+         p.r()    //=>1.414.......
+         //=====
+    </script>
+</body>
+
+</html>
