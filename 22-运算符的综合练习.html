@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>运算符的综合练习</title>
+</head>
+
+<body>
+    <script>
+        //练习1
+        var a = '1',
+            b = 3,
+            c = true;
+        d = a > b;
+        console.log(d); //false  转数字比较
+        console.log(a >= c); //true 
+        console.log(a>c);//false
+        console.log(!b); //false 转成符比较
+        console.log(!!a); //true 转成布尔类型
+        console.log(a + b); //'13'
+        console.log(b + c); //4
+        console.log(b - a); //2
+
+        var a = null,
+            b = 5;
+        console.log(a && b);//5
+
+        console.log(a||b);//5
+
+
+        //练习2
+        var a='1',b=3 , c=true;
+        //a>b&&c<b  //==>false
+        //+c       //=>1
+        //++a+c   //==>3  ++前置 先自增 在运算 a=2
+        //++b+"ssss"  //"4ssss"
+        //6/0  //infinity
+        //NaN *0=> NaN
+        //b>c? ++a:c  //==》 ++a 
+    </script>
+</body>
+
+</html>
