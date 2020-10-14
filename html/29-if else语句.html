@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>if else语句</title>
+</head>
+
+<body>
+    <script>
+        //else:否则的意思
+        // if else 语句的格式：
+        /*if(表达式) {
+语句；
+       }
+            
+         else{
+             语句；
+         }
+       */
+        var age = 25;
+        if (age > 18) { //如果条件表达式为真值，那么执行紧跟的语句块，否则执行else语句
+            console.log(' 小明的年龄大于18 ,可以给小明喝啤酒');
+        } else {
+            console.log('小明小于18 ， 不 给小明喝啤酒');
+        }
+        //===================================
+        var a = 6;
+        if (a < 5) {
+            console.log(' 画画不努力 老大图伤悲');
+        } else {
+            console.log('画画努力 老大有房有车有老婆 ')
+        }
+
+
+        //如果有多个条件，分别对应执行多个操作的时候怎么用if和else
+
+        //比如：a=1[2,3--7];输出a=1,那么输出星期一，a=2 输出星期二 ........ 多个重复的条件语句可以使用if ,else if语句  
+        /*  语法格式
+        if(表达式){
+            语句；
+        }else if(表达式){
+            语句；
+        }else if {
+            语句;
+        } else{
+            语句 （可以加多个else）
+        }
+
+        */
+        var num = 4;
+        if (num == 1) {
+            console.log('星期一');
+        } else if (num == 2) {
+            console.log('星期二');
+        } else if (num == 3) {
+            console.log('星期三');
+        } else if (num == 4) {
+            console.log('星期四');
+        }else if (num == 5) {
+            console.log('星期五');
+        }else if (num == 6) {
+            console.log('星期六');
+        }else  {
+            console.log('星期日');
+        }
+    </script>
+</body>
+
+</html>

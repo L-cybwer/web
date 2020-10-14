@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>if嵌套</title>
+</head>
+
+<body>
+
+
+    <!--    if语句的嵌套：if语句内部的语句块可以嵌套其他语句以及if语句
+    if(表达式){
+    if(表达式2){
+    if（表达式3）{
+    console.log(1);
+    }
+    }
+    }
+    案列：如果变量a是数值类型，那么判断其是否大于9，如果大于9则输出''大于9'，否则输出""非法类型""-->
+
+
+    <script>
+        var a = 8;
+
+        //判断变量a的类型，使用typeof可以获取它的类型
+        if (typeof (a) === "number") {
+            console.log('数字类型');
+            //判断a是否大于9
+            if (a > 9) {
+                console.log('大于9');
+            } else {
+                console.log('小于9,非法类型');
+            }
+        } else {
+            console.log('非数字');
+        }
+    </script>
+    <!-- //if语句练习
+    //备注：Math.random()方法会随机返回0-1之间的小数;parseInt(Math.random()*10) 0-10之间的整数
+    //1：声明两个变量a,b随机赋值0-10之间的数，然后如果a>b  输出 a,如果a=b 输出=号，如果 a < b输出 老马
+    //2：给定一个数值变量（1-7之间）对应输出星期几，比如：1输出星期一，2输出星期二
+    //3：判断一个变量是不是字符串，如果是字符串请将字符串转换为数值类型并返回结果，否则，直接把变量转换成boolean类型输出结果。
+    //4：判断用户名是否为空-->
+
+
+    <script>
+        //1：声明两个变量a,b随机赋值0-10之间的数，然后如果a>b  输出 a,如果a=b 输出=号，如果 a < b输出 老马
+        var a, b;
+        //Math.random()可以随机生成一个0-1之间的数
+        a = Math.random() * 10; //*10后，就生成0-10之间的一个随机数
+        b = Math.random() * 10;
+        if (a > b) {
+            console.log('a');
+        } else if (a == b) {
+            console.log('=');
+        } else {
+            console.log('老马');
+        }
+    </script>
+
+
+    <script>
+        //2：给定一个数值变量（1-7之间）对应输出星期几，比如：1输出星期一，2输出星期二
+        var a = parseInt(Math.random() * 7);
+        if (a == 6) {
+            console.log('周末');
+        } else if (a == 7) {
+            console.log('周末');
+        } else if (a == 1, 2, 3, 4, 5) {
+            console.log('工作日');
+        }
+    </script>
+
+    //给定一个数值变量（1-7之间）如果是6 ,7输出周末 否则输出工作日。
+    <script>
+        var a = 7;
+        // if(a==6) {
+        //     console.log('周末');
+        // } else if('a==7') {
+        //     console.log('周末');
+        // }else{
+        //     console.log('工作日');
+        // }
+        //判断合并写法
+        if (a == 7 || a == 6) {
+            console.log('周末');
+        } else {
+            console.log('工作日');
+        }
+
+
+
+        //判断用户名是否为空
+        // var userName = ''; //undefined  ''  'maIun' null
+        // var userName =undefined ;
+        var userName = "ssss"; //正常字符串
+        //null ==undefined =>trued
+        if (userName == null || userName == 0) { //username==null||username==undefined
+            console.log(' 空！');
+        }
+
+        //判断一个变量是不是字符串，如果是字符串请将字符串转换为数值类型并返回结果，否则，直接把变量转换成boolean类型输出结果。
+        var t = 5;
+        if (typeof (t === "string")) {
+            console.log(Number(t));
+        } else {
+            // console.log(boolean(t)); //如果不是字符串则转换布尔类型
+              console.log(!!t);//转换布尔类型的另一种写法 ctrl+k+c注释 ctrl+k+u
+        }
+    </script>
+</body>
+
+</html>
