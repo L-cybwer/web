@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>逻辑运算符</title>
+</head>
+
+<body>
+    <script>
+        //boolean 操作符
+        //1.逻辑非 符号用"！"取反的意思
+        var a = true;
+        a = !a; //false
+        console.log(a);
+
+
+
+        //2.逻辑与是用两个"&&"符号表示的
+        var a = true,
+            b = true;
+        console.log(a && b); //true 同时为真时才返回true 其他false
+
+
+
+        //3.逻辑或 用两个竖线连接两个变量运算（||）
+        var a = true,
+            b = true;
+        console.log(a || b); //true 两个变量只要有一个为真 那么就返回true
+
+        var a = false,
+            b = false;
+        console.log(a || b); //false如果两个都为false ，就返回false.
+
+        //=====================================================================
+        //逻辑运算符的短路运算
+        //由于进行逻辑运算的变量不一定都是Boolean类型 非布尔类型的&&逻辑运算返回第一个假值或者最后一个真值的操作数（直接量 表达式）
+        //的值可以不是布尔类型
+        var p = 89 && (9 < 3);
+        console.log(p); //false
+       //
+        var a = 0 && (98);
+        console.log(a);//0  注意0不是布尔类型 
+
+        //类似短路的表达式，||运算符可以返回第一个真值或者最后一个假值||类型返回安全处理
+        //有时候为了防止变量为空，可以设置一个保底的结果
+       //t=max||max-width||500; 
+       //====
+    </script>
+</body>
+
+</html>

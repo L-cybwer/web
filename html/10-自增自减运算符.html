@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自增自减运算符</title>
+</head>
+
+<body>
+    <script>
+        var i = 11;
+        i++; //自增运算符 ,自己增加1；
+        //i=i+1;
+        console.log(i); //=>12
+
+        //自加运算符在前面的时候，先进性自加运算 在参与表达式的运算
+        ++i; //表达式也相当于i=i+1;
+        console.log(i); //=>13;
+
+        //自增自减的区别 前置自增会影响到语句的运算结果 后置自增等语句执行完后再对变量进性自增处理.
+        // var i2 = ++i + 3; //i=13,++i=14  14+3=17；
+        //  console.log(i2);
+        var i2 = i++ + 3;
+        console.log(i2); //i=13,i+3=16,最后在让i=i+1;
+
+//=====
+
+
+        //=======================================================
+        //自减运算
+        var t = 11;
+        t--; //t=t-1;自减运算
+        console.log(t); //=>10;
+
+        --t;
+        console.log(t); //=>9;
+
+
+
+        var i3 = (t--) - 3; // i3=9 i3-3=6 ,最后i3=i-1;
+        console.log(i3); //=>6
+
+        var i3 = --t - 3; //i=9 --i=8  8-3=5;
+        console.log(i3); //=>5
+    </script>
+</body>
+
+</html>

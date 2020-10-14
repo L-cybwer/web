@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>求余运算的特殊情况</title>
+</head>
+
+<body>
+    //=====
+    <script>
+        console.log(4 % 3); //=>1 如果操作数都是数值，执行常规的除法计算，返回除的余数
+        console.log(Infinity % 3); // => NaN 如果被除数是无穷大值而除数是有限值 则返回NaN;
+        console.log(452 % 0); // =>NaN 被除数是有限大，除数是零 则返回NaN
+        console.log(Infinity % Infinity); //=> 被除数和除数都是无穷大 或 小  则结果是NaN
+        console.log(33 % Infinity); // =>33 如果被除数是有限大 除数是无穷大的数值 则结果是被除数。
+        console.log(0 % Infinity); //=> 0  如果被除数是零 则结果是0；
+        console.log('3' % 2); //=> 如果操作数不是数值 则后台调用number()将其转换为数值，然后再引用上面规则.
+    </script>
+</body>
+
+</html>

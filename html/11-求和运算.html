@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>求和运算</title>
+</head>
+
+<body>
+    <script>
+        //1.加法运算分为：字符串连接运算和算数加法运算
+        var a = 1 + 2; //a=>3 算数运算加法
+        console.log(a);
+        var a = '我是' + '老马'; //a='我是老马'字符串 连接
+        console.log(a);
+
+        //==================================================
+
+        //2.当运算的变量中有字符串的时候优先字符串连接，后考虑算法运算
+        var a = 1 + '22'; //=>"122"字符串连接操作
+        console.log(a);
+        //二元运算
+//=====
+        // ======================================
+        //一元运算
+        var t = '23';
+        var m = +t; //m=>23 转换成数字
+        console.log(m);
+    </script>
+</body>
+
+</html>

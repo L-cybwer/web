@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>运算符</title>
+</head>
+
+<body>
+    <script>
+        //如果两个正常数的数学运算，就按照正常算法来计算
+        var a = 10 * 10;
+        console.log(a);
+
+
+        //除法运算符
+        var a = -999999e4000;
+        var b = 0.0000000000000000000000000000000000000000000000000000000001;
+        var t = a / b; //-infinity.
+        console.log(t); //当a/b的结果超出了ECMAScript的范围 那么结果就是infinity.
+
+
+        //如果一个操作数是NaN 那么结果是NaN。
+        var n1 = NaN;
+        var n2 = 2;
+        console.log(n1 / n1); //NaN
+        //=========
+        //如果infinity 和infinity相除 结果是NaN.
+        var a = Infinity;
+        var b = -Infinity;
+        var t = a / b;
+        console.log(t);
+
+        console.log(0/0);// NaN  如果零被零除 则结果是NaN ,如果被除数不是0结果就是Infinity 
+        console.log('-33/0='+(-33/0));// -Infinity 如果是非零有限的整数被零除 则结果是Infinity -Infinity  取决于操作符。
+        console.log(-Infinity/2);// -Infinity 如果是Infinity被任何非零数值除 则结果是Infinity  -Infinity 取决于操作符。 
+        console.log(-21/Infinity);// -0   如果一个非零数值被Infinity 除 结果是0 -0  取决于符号。
+    </script>
+</body>
+
+</html>
