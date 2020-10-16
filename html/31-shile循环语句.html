@@ -1,16 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>while循环语句</title>
 </head>
+
 <body>
     <script>
-   var a =5;
-     b=a+6;
+        var a = 5;
+        b = a + 6;
         console.log(b);
     </script>
+
+
+    //=============================
+
+    <!--
+  如何实现用js计算1到100的和？
+  1+2+3+4+...............
+  while就是循环语句的一一种
+  语法：
+  while(表达式){
+      语句;
+  }  //语义：当满足条件时，循环执行语句，直到表达式不成立
+  demo:
+  var i=0,sum=0;
+  while(i<=50){
+      sum+=i;
+      i++;
+  }
+-->
+
+
+
+    <!--
+    当满足这个判断表达式为真值的时候，不断进行循环执行语句块。
+while(判断表达式) {
+    //循环语句块。
+}
+//第二步：判断表达式 是否为为真值（1，true ,非空字符)
+//第二步；执行while语句块 ，否者结束while 语句的循环，继续执行后面的语句
+//继续重复第一步 第二步
+
+-->
+
+    <script>
+        var t = 0;
+        var i = 1;//循环索引
+        while (i <= 100) {
+            //循环语句块
+            t += i; //t=>1+2=>3 
+            i++; //i=>2,i=>3,
+        }
+        console.log(t);
+    </script>
 </body>
+
 </html>
