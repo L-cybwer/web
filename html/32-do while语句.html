@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>do while</title>
+</head>
+
+<body>
+
+
+    <!--
+   do while语句
+   do {
+       语句；
+   }while (表达式);
+
+   do while语句就是先执行一个语句块然后在做判断，如果表达式成立继续下一次的语句的执行
+   do while语句较少使用(循环语句)
+
+    -->
+    <script>
+        var t;//变量
+        var i = 0;//循环的次数 ，索引.
+        do {
+            t = Math.random() * 100;//变量t是0到100之间的随机小数
+            console.log(t);
+            i++;//让索引加 1
+            console.log(i);
+        } while (i < 10);
+        console.log('循环执行完毕')
+    </script>
+</body>
+
+</html>
